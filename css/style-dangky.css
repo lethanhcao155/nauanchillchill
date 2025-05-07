@@ -1,0 +1,79 @@
+/* style-dangky.css */
+body.register-page {
+  font-family: Arial, sans-serif;
+  background-image: url("../anh/backgroud_dangky.jpg"); /* Đường dẫn ảnh nền */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.register-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  max-width: 90%;
+}
+
+h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+input[type="submit"].btn {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.back-btn {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}

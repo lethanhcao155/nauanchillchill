@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng nhập</title>
+    <link rel="stylesheet" href="./css/style-dangnhap.css" />
+  </head>
+  <body class="login-page">
+    <div class="container">
+      <h1>Đăng nhập vào hệ thống</h1>
+      <form id="loginForm">
+        <label for="username">Tên đăng nhập:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Mật khẩu:</label>
+        <input type="password" id="password" name="password" required />
+
+        <input type="submit" value="Đăng nhập" class="btn" />
+        <div id="errorMessage" class="message"></div>
+
+        <div class="form-footer">
+          <a href="index.html" class="btn secondary">Trang chủ</a>
+          <a href="dangky.html" class="btn secondary">Tạo tài khoản</a>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      // Dữ liệu người dùng tạm thời
+      const users = [
+        { username: "admin", password: "12345" },
+        { username: "user", password: "password" },
+      ];
+
+      const form = document.getElementById("loginForm");
+      const errorMessage = document.getElementById("errorMessage");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        const user = users.find(
+          (user) => user.username === username && user.password === password
+        );
+
+        if (user) {
+          alert("Đăng nhập thành công!");
+          window.location.href = "index.html";
+        } else {
+          errorMessage.textContent = "Tên đăng nhập hoặc mật khẩu không đúng!";
+          errorMessage.style.color = "red";
+        }
+      });
+    </script>
+  </body>
+</html>

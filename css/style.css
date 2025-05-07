@@ -1,0 +1,52 @@
+/* Tổng quan chung cho toàn bộ trang */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container chứa các nút và nội dung chính */
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8); /* Nền mờ để tạo sự nổi bật */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+/* Các nút */
+.btn {
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Nền cho trang index */
+body.index-page {
+  background-image: url("../anh/backgroud.jpg"); /* Hình ảnh nền cho trang chính */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
